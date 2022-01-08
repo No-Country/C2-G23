@@ -15,8 +15,8 @@ class CreateHotelTable extends Migration
     {
         Schema::create('hotel', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('hotel_information_id')->nullable()->constrained('hotel_information');
-            $table->foreignId('zone_location_id')->nullable()->constrained('hotel_information');
+            $table->foreignId('hotel_information_id')->nullable(false)->constrained('hotel_information');
+            $table->foreignId('zone_location_id')->nullable(false)->constrained('zone_location');
             $table->timestamps();
         });
     }

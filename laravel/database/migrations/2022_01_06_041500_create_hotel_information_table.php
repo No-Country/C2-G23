@@ -17,8 +17,9 @@ class CreateHotelInformationTable extends Migration
             $table->id();
             $table->string('name')->unique('hotel_name');
             $table->string('description');
-            $table->string('photo');
-            $table->string('phone');
+            $table->string('photo')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('slug')->nullable(true);
             $table->timestamps();
         });
     }

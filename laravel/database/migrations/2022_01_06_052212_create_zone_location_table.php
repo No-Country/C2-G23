@@ -16,7 +16,7 @@ class CreateZoneLocationTable extends Migration
         Schema::create('zone_location', function (Blueprint $table) {
             $table->id();
             $table->foreignId('province_id')->constrained('province');
-            $table->foreignId('city_id')->constrained('city');
+            $table->foreignId('city_id')->unique()->constrained('city');
             $table->timestamps();
         });
     }
