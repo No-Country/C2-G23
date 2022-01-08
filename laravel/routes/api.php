@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\ZoneLocationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+
+Route::post('zone', [ZoneLocationController::class, 'createZoneLocation']);
+Route::get('zone/all', [ZoneLocationController::class, 'showZoneLocations']);
+Route::get('zone/cities', [ZoneLocationController::class, 'showCitiesByProvince']);
+
+Route::post('hotel', [HotelController::class, 'createHotel']);
