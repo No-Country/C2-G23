@@ -39,22 +39,6 @@ class ZoneLocationController extends Controller
     public function showZoneLocations(Request $request)
     {
         try {
-            $service = new ZoneLocationService;
-
-            $zones = $service->getZoneLocations();
-            $zones_resource = ZoneLocationResource::collection($zones);
-
-            return APIResponse::success($zones_resource, 'OK');
-
-       } catch (\Exception $e) {
-           return APIResponse::fail($e->getMessage(), [], 500);
-       }
-
-    }
-
-    public function showCitiesByProvince(Request $request)
-    {
-        try {
 
             $service = new ZoneLocationService;
 
@@ -65,6 +49,27 @@ class ZoneLocationController extends Controller
             return APIResponse::success($zones_resource, 'OK');
 
         } catch (Exception $e) {
+            return APIResponse::fail($e->getMessage(), [], 500);
+        }
+    }
+
+    public function createZoneProvince(Request $request)
+    {
+        try {
+
+            $this->validate($request, [
+                'province_name' => 'required|string'
+            ]);
+
+            $service = new ZoneLocationService;
+
+            $provinceName = $request->get('province_name');
+
+            $province = $service->addZoneProvince($provinceName);
+
+            return APIResponse::success($province, 'OK');
+        } catch (Exception $e) {
+
             return APIResponse::fail($e->getMessage(), [], 500);
         }
     }

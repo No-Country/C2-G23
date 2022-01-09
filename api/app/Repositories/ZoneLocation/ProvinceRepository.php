@@ -9,7 +9,7 @@ class ProvinceRepository implements RepositoryInterface {
 
     public function create(array $repositoryModel) : Province
     {
-        return Province::firstOrCreate($repositoryModel);
+        return Province::create($repositoryModel);
     }
 
     public function update(array $repositoryModel)
