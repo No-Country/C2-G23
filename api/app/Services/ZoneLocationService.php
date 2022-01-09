@@ -35,6 +35,30 @@ class ZoneLocationService {
         }
     }
 
+    public function addZoneProvince(string $provinceName)
+    {
+        DB::beginTransaction();
+
+        try {
+            $provinceRepository = new ProvinceRepository;
+
+            $province = $provinceRepository->create(['name' => $provinceName]);
+
+            DB::commit();
+
+            return $province;
+
+        }
+        catch (Exception $e) {
+            DB::rollBack();
+            throw $e;
+        }
+        catch (\Throwable $th) {
+            DB::rollBack();
+            throw $th;
+        }
+    }
+
     public function getZoneLocations()
     {
         try {

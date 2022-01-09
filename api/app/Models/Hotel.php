@@ -18,4 +18,9 @@ class Hotel extends Model
     public function location() {
         return $this->belongsTo(ZoneLocation::class, 'zone_location_id', 'id');
     }
+
+    public function scopeWhereLike($query, $column, $value)
+    {
+        return $query->where($column, 'LIKE', '%'.$value.'%');
+    }
 }

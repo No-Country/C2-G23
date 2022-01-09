@@ -49,4 +49,17 @@ class HotelService {
         }
 
     }
+
+    public function showHotels(bool $is_all, array $filters = [])
+    {
+
+        $hotel = new Hotel;
+
+        if($is_all) {
+            return $hotel::all();
+        }
+
+        
+
+    }
 }

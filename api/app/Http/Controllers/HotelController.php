@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Responses\APIResponse;
 use App\Services\HotelService;
+use Exception;
 use Illuminate\Http\Request;
 
 class HotelController extends Controller
@@ -30,6 +31,21 @@ class HotelController extends Controller
            return APIResponse::success($hotel, 'OK');
 
         } catch (\Exception $e) {
+            return APIResponse::fail($e->getMessage(), [], 500);
+        }
+    }
+
+    public function getHotels(Request $request)
+    {
+        try {
+
+            $this->validate($request, [
+                'is_all' => 'bail|required|boolean',
+                'filters' => 'required_if:is_all,0|array',
+                'filters.hotel_name' => 'string'
+            ]);
+
+        } catch (Exception $e) {
             return APIResponse::fail($e->getMessage(), [], 500);
         }
     }
