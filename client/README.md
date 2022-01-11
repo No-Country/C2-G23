@@ -1,5 +1,5 @@
 ### Pasos para crear el proyecto
-
+### Primera Parte:
 -Limpiar la plantilla instalada por defecto con react y redux
 
 -trabajamos en APP.js - creando los primeros componentes siguiendo los detalles de FIGMA
