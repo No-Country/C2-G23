@@ -59,7 +59,21 @@ class HotelService {
             return $hotel::all();
         }
 
-        
+    }
 
+    public function showHotelsByZoneLocation(array $filters)
+    {
+        try {
+
+            $hotel = new Hotel;
+
+            $zoneLocationRepository = new ZoneLocationRepository();
+
+            /*????*/
+            return $hotel::all();
+
+        } catch (\Exception $e) {
+            throw $e;
+        }
     }
 }

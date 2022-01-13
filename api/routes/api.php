@@ -25,3 +25,7 @@ Route::get('zone/all', [ZoneLocationController::class, 'showZoneLocations']);
 Route::get('zone/cities', [ZoneLocationController::class, 'showCitiesByProvince']);
 
 Route::post('hotel', [HotelController::class, 'createHotel']);
+
+Route::get('hotel/all', [HotelController::class, 'showHotels']);
+Route::get('hotel/zoneLocation', [HotelController::class, 'showHotelsByZoneLocation']);
+
