@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.main{
+    background-color: azure;
+    margin: 10px 5px 10px 5px;
+    text-align: center;
+}
+
+.img{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    height: 100px;
+
+}
+.img1{
+    width: 25%;
+    height: 150px;
+    background-image: url(../img/rest.jpg);
+}
