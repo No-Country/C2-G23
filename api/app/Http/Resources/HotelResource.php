@@ -22,7 +22,7 @@ class HotelResource extends JsonResource
                 'description' => $this->hotel_informacion->description,
                 'photo' => $this->hotel_informacion->photo,
                 'phone' => $this->hotel_informacion->phone,
-            ],
+            ]
         ];
     }
 }

@@ -59,7 +59,7 @@ class HotelController extends Controller
         }
     }
 
-    public function showHotelByZoneLocation(Request $request)
+    public function showHotelsByZoneLocation(Request $request)
     {
         try {
 

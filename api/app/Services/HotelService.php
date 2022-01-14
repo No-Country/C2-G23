@@ -65,12 +65,12 @@ class HotelService {
     {
         try {
 
-            $hotel = new Hotel;
+            $province = $filters['province'];
+            $city = $filters['city'];
 
-            $zoneLocationRepository = new ZoneLocationRepository();
+            $hotelInformation = $this->hiRepository->showHotelsByZoneLocation($province, $city);
 
-            /*????*/
-            return $hotel::all();
+            return $hotelInformation;
 
         } catch (\Exception $e) {
             throw $e;
