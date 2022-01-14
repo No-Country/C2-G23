@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('zone', [ZoneLocationController::class, 'createZoneLocation']);
+Route::post('zone/province', [ZoneLocationController::class, 'createZoneProvince']);
 Route::get('zone/all', [ZoneLocationController::class, 'showZoneLocations']);
-Route::get('zone/cities', [ZoneLocationController::class, 'showCitiesByProvince']);
 
 Route::post('hotel', [HotelController::class, 'createHotel']);
 
