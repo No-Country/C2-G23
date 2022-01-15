@@ -23,3 +23,5 @@ escribir para crear las funciones y clases:
         const displayDesktop
 Crear Toolbar (elemento heredado de Material UI)
 Crear const UseStyle = makeStyles((theme) para darle los efectos visuales.
+
+Creando el header para desktop en Header.js 10:13
