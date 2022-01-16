@@ -1,26 +1,86 @@
-import {React, useState }from 'react';
+import {React, useState, useEffect }from 'react';
 
-import { AppBar, Avatar, InputBase, makeStyles, Toolbar, Typography } from '@material-ui/core';
+// Componentes Material UI
+import { AppBar, Avatar, Drawer, IconButton, InputBase, List, ListItem, makeStyles, Toolbar, Typography } from '@material-ui/core';
+
+// Iconos
 import SearchIcon from "@material-ui/icons/Search"
+import MenuIcon from "@material-ui/icons/Menu"
+
+// Logos
 import logo from "../img/logo.png"
-import { minWidth } from '@mui/system';
 
 const Header = () =>{
-    const [mobile, setMobile] = useState(false)
+    const [mobile, setMobile] = useState(true);
+    const [drawerOpen, setDrawerOpen] = useState(false);
     const classes = useStyle();
-    const displayMobile = () =>{ };
+
+    useEffect(() => {
+        const responsivness = () => window.innerWidth < 900 ? setMobile(true) : setMobile (false);
+        responsivness();
+        window.addEventListener("resize", ()=>responsivness())
+    }, [])
+    
+    const displayMobile = () => {
+        const handleDrawerOpen = () =>{
+            setDrawerOpen(true)
+        };
+        const handleDrawerClose = () => {
+            setDrawerOpen(false)
+        };
+        const headersData = ["Mi Cuenta", "Mis Reservas", "Salir"]
+        const getDrawerChoices = () => {
+            return headersData.map((data)=>{
+                return(
+                    <List>
+                        <ListItem>{ data }</ListItem>
+                    </List>
+                )
+            })
+        };
+
+        return(
+        <Toolbar className={classes.toolbar}>
+                <div className={classes.right}>
+                    <Avatar className={classes.avatar} />
+                    <Typography>Sign In</Typography>
+                </div>
+                <img src={logo} className={classes.logo} alt="logo" />
+            <IconButton {...{
+                edge:"start", 
+                color:"#ccc", 
+                "aria-label": "menu", 
+                "aria-haspopup": "true",
+                onClick: handleDrawerOpen,
+                
+                }}>
+                <MenuIcon className={classes.menuIcon}/>
+            </IconButton>
+                <Drawer {...{
+                    anchor: "bottom",
+                    open: drawerOpen,
+                    onClose: handleDrawerClose,
+                }}>
+                    <div className={classes.menu}>{ getDrawerChoices() }</div>
+                </Drawer>
+                
+        </Toolbar>
+        )
+    }
+
     const displayDesktop = () => {
         return(
             <Toolbar className={classes.toolbar}>
+                <div className={classes.right}>
+                    <Typography>Sign In</Typography>
+                    <Avatar className={classes.avatar} />
+                </div>
                 <img src={ logo } className={classes.logo}/>
                 <div className={classes.center}>
                     <InputBase fullWidth placeholder='Busqueda...' inputProps={{className: classes.input}}/>
                     <SearchIcon />
                 </div>
-                <div className={classes.right}>
-                    <Typography>Sign In</Typography>
-                    <Avatar className={classes.avatar} />
-                </div>
+
             </Toolbar>
         )
     }
@@ -73,6 +133,17 @@ const useStyle = makeStyles((theme) => ({
     },
     avatar:{
         margin: theme.spacing(1),
+    },
+    menu:{
+        color:"white",
+        backgroundColor:"black"
+    },
+    menuIcon:{
+        color:"black",
+        fontSize:"2.5rem",
+        backgroundColor:"white",
+        border:"2px solid white",
+        borderRadius:"9999px"
     }
 
 }))

@@ -9,6 +9,7 @@ const Home = () => {
     return (
         <div>
             <div className={ styles.main }>
+                <p>HOME</p>
             </div>
         </div>
     )
