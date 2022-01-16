@@ -1,6 +1,6 @@
 import {React, useState }from 'react';
 
-import { AppBar, InputBase, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Avatar, InputBase, makeStyles, Toolbar, Typography } from '@material-ui/core';
 import SearchIcon from "@material-ui/icons/Search"
 import logo from "../img/logo.png"
 import { minWidth } from '@mui/system';
@@ -19,13 +19,14 @@ const Header = () =>{
                 </div>
                 <div className={classes.right}>
                     <Typography>Sign In</Typography>
+                    <Avatar className={classes.avatar} />
                 </div>
             </Toolbar>
         )
     }
 
     return(
-    <AppBar>
+    <AppBar className={classes.root}>
         {
         mobile ? displayMobile() : displayDesktop()
         }
@@ -34,6 +35,13 @@ const Header = () =>{
 }
 
 const useStyle = makeStyles((theme) => ({
+    root:{
+        position: "sticky", //sirve para que el header se vea siempre
+        top:0,
+        zIndex:99,
+        backgroundColor:"black",
+        width:"100vw",
+    },
     toolbar: {
         display : "flex",
         justifyContent: "space-between",
@@ -46,8 +54,8 @@ const useStyle = makeStyles((theme) => ({
     },
     input:{
         fontSize:"1rem",
-        padding: theme.spacing(1,5,1,5)
-
+        padding: theme.spacing(1,5,1,5),
+        color: "white",
     },
     center:{
         display:"flex",
@@ -57,6 +65,14 @@ const useStyle = makeStyles((theme) => ({
         border:"1px solid white",
         borderRadius: "999px",
         minWidth:"20rem"
+    },
+    right:{
+        display:"flex",
+        alignItems: "center",
+        marginLeft: theme.spacing(1)
+    },
+    avatar:{
+        margin: theme.spacing(1),
     }
 
 }))
