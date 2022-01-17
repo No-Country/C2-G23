@@ -3,7 +3,7 @@
 namespace App\Repositories\ZoneLocation;
 
 use App\Models\Province;
-use App\Repositories\Interface\RepositoryInterface;
+use App\Repositories\Interfaces\RepositoryInterface;
 
 class ProvinceRepository implements RepositoryInterface {
 
