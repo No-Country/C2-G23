@@ -8,7 +8,7 @@ import SearchIcon from "@material-ui/icons/Search"
 import MenuIcon from "@material-ui/icons/Menu"
 
 // Logos
-import logo from "../img/logo.png"
+import logo from "../img/logo2.png"
 
 const Header = () =>{
     const [mobile, setMobile] = useState(true);
@@ -40,29 +40,28 @@ const Header = () =>{
         };
         return(
         <Toolbar className={classes.toolbar}>
-                <div className={classes.right}>
-                    <Avatar className={classes.avatar} />
-                    <Typography>Sign In</Typography>
-                </div>
                 <img src={logo} className={classes.logo} alt="logo" />
-            <IconButton {...{
-                edge:"start", 
-                color:"#ccc", 
-                "aria-label": "menu", 
-                "aria-haspopup": "true",
-                onClick: handleDrawerOpen,
-                
-                }}>
-                <MenuIcon className={classes.menuIcon}/>
-            </IconButton>
-                <Drawer {...{
-                    anchor: "bottom",
-                    open: drawerOpen,
-                    onClose: handleDrawerClose,
-                }}>
-                    <div className={classes.menu}>{ getDrawerChoices() }</div>
-                </Drawer>
-                
+                <div className={classes.right}>
+                    <Typography>Sign In</Typography>
+                    <Avatar className={classes.avatar} />
+                    <IconButton {...{
+                        edge: "start",
+                        color: "#ccc",
+                        "aria-label": "menu",
+                        "aria-haspopup": "true",
+                        onClick: handleDrawerOpen,
+                    }}>
+                        <MenuIcon className={classes.menuIcon} />
+                    </IconButton>
+                    <Drawer {...{
+                        anchor: "bottom",
+                        open: drawerOpen,
+                        onClose: handleDrawerClose,
+                    }}>
+                        <div className={classes.menu}>{getDrawerChoices()}</div>
+                    </Drawer>
+                </div>
+
         </Toolbar>
         )
     }
@@ -70,16 +69,15 @@ const Header = () =>{
     const displayDesktop = () => {
         return(
             <Toolbar className={classes.toolbar}>
-                <div className={classes.right}>
-                    <Typography>Sign In</Typography>
-                    <Avatar className={classes.avatar} />
-                </div>
                 <img src={ logo } className={classes.logo}/>
                 <div className={classes.center}>
                     <InputBase fullWidth placeholder='Busqueda...' inputProps={{className: classes.input}}/>
                     <SearchIcon />
                 </div>
-
+                <div className={classes.right}>
+                    <Typography>Sign In</Typography>
+                    <Avatar className={classes.avatar} />
+                </div>
             </Toolbar>
         )
     }
@@ -107,8 +105,8 @@ const useStyle = makeStyles((theme) => ({
         alignItems: "center"
     },
     logo:{
-        width:"20%",
-        margin: theme.spacing( 1, 0, 1, 2),
+        width:"15%",
+        margin: theme.spacing( 1, 0, 1, 0),
         objectFit: "contain",
     },
     input:{
@@ -142,7 +140,7 @@ const useStyle = makeStyles((theme) => ({
         fontSize:"2.5rem",
         backgroundColor:"white",
         border:"2px solid white",
-        borderRadius:"9999px"
+        borderRadius:"5px"
     }
 
 }))
