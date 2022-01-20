@@ -38,7 +38,6 @@ const Header = () =>{
                 )
             })
         };
-
         return(
         <Toolbar className={classes.toolbar}>
                 <div className={classes.right}>
