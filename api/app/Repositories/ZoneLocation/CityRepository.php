@@ -3,32 +3,13 @@
 namespace App\Repositories\ZoneLocation;
 
 use App\Models\City;
-use App\Repositories\Interface\RepositoryInterface;
+use App\Repositories\Interfaces\RepositoryInterface;
+use App\Repositories\Repository;
 
-class CityRepository implements RepositoryInterface {
+class CityRepository extends Repository {
 
     public function create(array $repositoryModel) : City
     {
         return City::create($repositoryModel);
-    }
-
-    public function update(array $repositoryModel)
-    {
-        return null;
-    }
-
-    public function show()
-    {
-        return null;
-    }
-
-    public function remove()
-    {
-        return null;
-    }
-
-    public function find(int $repositoryId)
-    {
-        return null;
     }
 }

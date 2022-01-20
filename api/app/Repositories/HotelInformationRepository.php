@@ -3,10 +3,9 @@
 namespace App\Repositories;
 
 use App\Models\HotelInformation;
-use App\Repositories\Interface\RepositoryInterface;
 use Illuminate\Support\Facades\DB;
 
-class HotelInformationRepository implements RepositoryInterface {
+class HotelInformationRepository extends Repository {
 
     public function create(array $repositoryModel) : HotelInformation
     {
@@ -14,26 +13,6 @@ class HotelInformationRepository implements RepositoryInterface {
         $hotelInformation = HotelInformation::create($repositoryModel);
 
         return $hotelInformation;
-    }
-
-    public function update(array $repositoryModel)
-    {
-        return null;
-    }
-
-    public function show()
-    {
-        return HotelInformation::all();
-    }
-
-    public function remove()
-    {
-        return null;
-    }
-
-    public function find(int $repositoryId)
-    {
-        return null;
     }
 
     public function showHotelsByZoneLocation(string $province, string $city) {
