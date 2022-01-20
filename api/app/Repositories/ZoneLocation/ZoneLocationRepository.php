@@ -3,9 +3,9 @@
 namespace App\Repositories\ZoneLocation;
 
 use App\Models\ZoneLocation;
-use App\Repositories\Interface\RepositoryInterface;
+use App\Repositories\Repository;
 
-class ZoneLocationRepository implements RepositoryInterface {
+class ZoneLocationRepository extends Repository {
 
     protected $provRepository;
     protected $cityRepository;
@@ -28,23 +28,6 @@ class ZoneLocationRepository implements RepositoryInterface {
         $zoneLocation->save();
 
         return $zoneLocation;
-    }
-
-    public function update(array $repositoryModel)
-    {
-
-    }
-
-    public function show()
-    {
-        $zoneLocations = ZoneLocation::all();
-
-        return $zoneLocations;
-    }
-
-    public function remove()
-    {
-
     }
 
     public function find(int $repositoryId)
