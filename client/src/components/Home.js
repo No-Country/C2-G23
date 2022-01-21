@@ -1,18 +1,54 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react';
 
-// importacion hoja de estilos
-import  styles  from "../styles/Header.module.css";
+import { Box, makeStyles } from '@material-ui/core';
 
 // importacion imagenes
 
 const Home = () => {
-    return (
-        <div>
-            <div className={ styles.main }>
-                <p>HOME</p>
+    const [mobile, setMobile] = useState(true);
+    const classes = useStyle();
+
+    useEffect(() => {
+        const responsivness = () => window.innerWidth < 900 ? setMobile(true) : setMobile(false);
+        responsivness();
+        window.addEventListener("resize", () => responsivness())
+    }, []);
+
+    const displayMobile = () =>{
+        return (
+            <div className={classes.main}>
             </div>
-        </div>
+        )
+    }
+
+    const displayDesktop = () => {
+        return (
+            <div>
+                <p>HOLA</p>
+            </div>
+        )
+    }
+
+    return (
+        <Box className={classes.root}>
+            {
+                mobile ? displayMobile() : displayDesktop()
+            }
+        </Box>
     )
-}
+};
+
+const useStyle = makeStyles((theme) => ({
+    root: {
+        textAlign: "center",
+        textAlignLast: "start",
+        backgroundColor: "#db6930"
+    },
+    main: {
+        backgroundColor: "black",
+        backgroundImage: "url()",
+    },
+
+}))
 
 export default Home

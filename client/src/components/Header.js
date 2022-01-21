@@ -61,7 +61,6 @@ const Header = () =>{
                         <div className={classes.menu}>{getDrawerChoices()}</div>
                     </Drawer>
                 </div>
-
         </Toolbar>
         )
     }

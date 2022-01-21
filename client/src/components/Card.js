@@ -10,7 +10,7 @@ export default function Cards({ img }) {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        alt="green iguana"
+        alt="habitacion1"
         height="140"
         image={img}
       />
@@ -23,7 +23,6 @@ export default function Cards({ img }) {
           species, ranging across all continents except Antarctica
 
           <div className='d-flex justify-content-between mt-3'>
-
             <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
 
               <div className='hvr-icon-grow' >

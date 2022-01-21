@@ -2,8 +2,8 @@ import { React, useState, useEffect } from 'react';
 
 import { makeStyles } from '@material-ui/core';
 
-const Footer = () => {
 
+const LogIn = () => {
     const [mobile, setMobile] = useState(true);
     const classes = useStyle();
 
@@ -13,26 +13,26 @@ const Footer = () => {
         window.addEventListener("resize", () => responsivness())
     }, []);
 
-        return (
-            <div>
-            </div>
+    return (
+        <div>
+        </div>
     )
 };
 
 const useStyle = makeStyles((theme) => ({
     footer: {
-        textAlign:"center",
-        textAlignLast:"start",
-        backgroundColor:"#db6930"
+        textAlign: "center",
+        textAlignLast: "start",
+        backgroundColor: "#db6930"
     },
-    primero:{
-        backgroundColor:"black",
-        color:"white",
+    primero: {
+        backgroundColor: "black",
+        color: "white",
     },
-    container:{
-        display:"flex",
-        justifyContent:"center",
-        padding: theme.spacing (5,0,5,0)
+    container: {
+        display: "flex",
+        justifyContent: "center",
+        padding: theme.spacing(5, 0, 5, 0)
     },
     logo: {
         width: "15%",
@@ -75,4 +75,5 @@ const useStyle = makeStyles((theme) => ({
 
 }))
 
-export default Footer;
+export default LogIn
+

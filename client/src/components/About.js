@@ -3,9 +3,9 @@ import React from 'react'
 export default function About() {
     return (
         <>
-            <h2 className='text-center my-5'>HOTEL MYHOTEL</h2>
+            <h2 className='text-center my-5'>Mis Reservas</h2>
             <div className='container'>
-                <p className='text-center parrafo_about'>Howard Johnson Hotel & Suites es un hotel urbano de diseño moderno y elegante. Ubicado en pleno centro de la ciudad de Córdoba, es el lugar perfecto para ejecutivos, parejas y familias que buscan comodidad y servicio de excelencia. Nuestros espacios están diseñados para vivir una experiencia única: amplias y cómodas habitaciones, spa con tratamientos relajantes, pileta y espacio al aire libre y amplios salones para eventos y reuniones. Todos estos servicios se complementan con una exquisita oferta gastronómica en nuestro restaurante Los Aliños, donde se puede disfrutar de la mejor combinación de comidas típicas y cocina de autor.
+                <p className='text-center parrafo_about'>Honsonzzzzz Hotel & Suites es un hotel urbano de diseño moderno y elegante. Ubicado en pleno centro de la ciudad de Córdoba, es el lugar perfecto para ejecutivos, parejas y familias que buscan comodidad y servicio de excelencia. Nuestros espacios están diseñados para vivir una experiencia única: amplias y cómodas habitaciones, spa con tratamientos relajantes, pileta y espacio al aire libre y amplios salones para eventos y reuniones. Todos estos servicios se complementan con una exquisita oferta gastronómica en nuestro restaurante Los Aliños, donde se puede disfrutar de la mejor combinación de comidas típicas y cocina de autor.
 </p>
                 <div className='row'>
                     <div className='col-12 col-md-4'>
