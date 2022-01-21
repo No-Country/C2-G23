@@ -3,28 +3,18 @@
 namespace App\Repositories\HotelRooms;
 
 use App\Models\HotelRoomInformation;
-use App\Repositories\Interface\RepositoryInterface;
+use App\Repositories\Repository;
 
-class HRInformationRepository implements RepositoryInterface {
+class HRInformationRepository extends Repository {
 
     public function show()
     {
         return HotelRoomInformation::all();
     }
 
-    public function create(array $repositoryModel)
+    public function create(array $repositoryModel) : HotelRoomInformation
     {
         return HotelRoomInformation::create($repositoryModel);
-    }
-
-    public function update(array $repositoryModel)
-    {
-        return null;
-    }
-
-    public function remove()
-    {
-        return null;
     }
 
     public function find(int $repositoryId)

@@ -23,8 +23,13 @@ class HotelRoom extends Model
         return $this->belongsTo(Hotel::class, 'hotel_id');
     }
 
-    public function isEnabled()
+    public function scopeRoomsEnabled($query)
     {
-        return $this->is_enabled;
+        return $query->where('is_enabled', 1);
+    }
+
+    public function scopeWhereHotelId($query, int $hotel_id)
+    {
+        return $query->where('hotel_id', $hotel_id);
     }
 }
