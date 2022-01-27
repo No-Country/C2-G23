@@ -35,7 +35,7 @@ const LogIn = () => {
 
     return (
         <Grid container component='main' className={classes.root}>
-            <CssBaseline/>
+            <CssBaseline
             <Container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
                 <div className={classes.div}>
                     <Avatar className= {classes.avatar}>

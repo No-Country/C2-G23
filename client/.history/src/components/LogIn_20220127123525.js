@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 
 import { AppBar, makeStyles } from '@material-ui/core';
 
-import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline } from  '@material-ui/core';
+import {Grid, Container, Paper, Avatar, Typography, TextField, Button } from  '@material-ui/core';
 
 import logueo from '../img/logueo.jpg';
 
@@ -23,7 +23,7 @@ const LogIn = () => {
     }
 
     const onSubmit =()=>{
-        console.log(body)
+        console.value
     }
 
     useEffect(() => {
@@ -35,7 +35,6 @@ const LogIn = () => {
 
     return (
         <Grid container component='main' className={classes.root}>
-            <CssBaseline/>
             <Container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
                 <div className={classes.div}>
                     <Avatar className= {classes.avatar}>
@@ -71,9 +70,9 @@ const LogIn = () => {
                         variant='contained'
                         color='secondary'
                         className={classes.button}
-                        onClick={()=> onSubmit()}
                     >
                     Ingresar
+
                     </Button>
 
                 </div>
