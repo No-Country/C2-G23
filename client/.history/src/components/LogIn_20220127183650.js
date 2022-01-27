@@ -4,9 +4,8 @@ import { makeStyles } from '@material-ui/core/Styles';
 
 import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline } from  '@material-ui/core';
 
-import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
 
-import logueo from '../img/logueo.jpg'
+import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
 
 const useStyle = makeStyles((theme) => ({
     root: {

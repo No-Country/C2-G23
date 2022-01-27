@@ -6,7 +6,7 @@ import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseli
 
 import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
 
-import logueo from '../img/logueo.jpg'
+import logueo from '../img/logueo'
 
 const useStyle = makeStyles((theme) => ({
     root: {
