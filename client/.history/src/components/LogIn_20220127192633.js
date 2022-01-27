@@ -124,7 +124,7 @@ const LogIn = () => {
                     Ingresar
                     </Button>
 
-                    <Link href= "/Home" className={classes.link}>
+                    <Link to= "/Home" className={classes.link}>
                         Recuperar contraseña
                     </Link>
 

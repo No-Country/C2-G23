@@ -1,8 +1,10 @@
 import { React, useState, useEffect } from 'react';
 
+import Link from 'react-router-dom'
+
 import { makeStyles } from '@material-ui/core/Styles';
 
-import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline, Link } from  '@material-ui/core';
+import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline } from  '@material-ui/core';
 
 import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
 
@@ -36,6 +38,7 @@ const useStyle = makeStyles((theme) => ({
     },
 
     link:{
+        color: 
 
     },
 
@@ -124,7 +127,7 @@ const LogIn = () => {
                     Ingresar
                     </Button>
 
-                    <Link href= "/Home" className={classes.link}>
+                    <Link to= "/Home" className={classes.link}>
                         Recuperar contraseña
                     </Link>
 
