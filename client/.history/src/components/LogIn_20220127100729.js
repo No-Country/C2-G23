@@ -2,12 +2,9 @@ import { React, useState, useEffect } from 'react';
 
 import { AppBar, makeStyles } from '@material-ui/core';
 
-import {Grid, Container, Paper, Avatar, Typography } from  '@material-ui/core';
+import {Grid, Container, Paper } from  '@material-ui/core';
 
-import logueo from '../img/logueo.jpg';
-
-import {LockOutlined as lockOutlinedIcon} from '@material-ui/icons';
-
+import logueo from '../img/logueo.jpg'
 
 const LogIn = () => {
     const [mobile, setMobile] = useState(true);
@@ -21,19 +18,10 @@ const LogIn = () => {
 
 
     return (
-        <Grid container component='main' className={classes.root}>
-            <container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
-                <div className={classes.div}>
-                    <Avatar className= {classes.avatar}>
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component='h1' variant='h5'> Sing In</Typography> 
-                    
-
-                </div>
-
+        <Grid container component='main' className={Classes.root}>
+        
+            <container component={Paper} elevation = {5} maxWidth= 'xs'>
             </container>
-
         </Grid>         
            
     )
@@ -50,27 +38,13 @@ const useStyle = makeStyles((theme) => ({
     },
 
     container: {
-        opacity: '0.8',
         height: '60%',
         marginTop: theme.spacing(10),
-        [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
-            marginTop: 0,
-            width: '100%',
-            height: '100%'
+        [theme.breakpoints.down(400 + theme.sac)]
+        textAlign: "center",
+        textAlignLast: "start",
+        backgroundColor: "#db6930"
     },
-
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.primary.main
-    }
-
-    div: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-    },
-
 
     footer: {
         textAlign: "center",

@@ -27,8 +27,7 @@ const LogIn = () => {
                     <Avatar className= {classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
-                    <Typography component='h1' variant='h5'> Sing In</Typography> 
-                    
+                    <typo
 
                 </div>
 

@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 
 import { AppBar, makeStyles } from '@material-ui/core';
 
-import {Grid, Container, Paper, Avatar, Typography } from  '@material-ui/core';
+import {Grid, Container, Paper, Avatar, tipography } from  '@material-ui/core';
 
 import logueo from '../img/logueo.jpg';
 
@@ -22,13 +22,13 @@ const LogIn = () => {
 
     return (
         <Grid container component='main' className={classes.root}>
-            <container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
+        
+            <container component={Paper} elevation = {5} maxWidth= 'xs' className={classes.container}>
                 <div className={classes.div}>
                     <Avatar className= {classes.avatar}>
-                        <LockOutlinedIcon />
+
+                        </lockOutlinedIcon>
                     </Avatar>
-                    <Typography component='h1' variant='h5'> Sing In</Typography> 
-                    
 
                 </div>
 

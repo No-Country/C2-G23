@@ -2,11 +2,11 @@ import { React, useState, useEffect } from 'react';
 
 import { AppBar, makeStyles } from '@material-ui/core';
 
-import {Grid, Container, Paper, Avatar, Typography } from  '@material-ui/core';
+import {Grid, Container, Paper, Avatar } from  '@material-ui/core';
 
 import logueo from '../img/logueo.jpg';
 
-import {LockOutlined as lockOutlinedIcon} from '@material-ui/icons';
+import {lockOutlined as Lockout}
 
 
 const LogIn = () => {
@@ -22,15 +22,14 @@ const LogIn = () => {
 
     return (
         <Grid container component='main' className={classes.root}>
-            <container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
+        
+            <container component={Paper} elevation = {5} maxWidth= 'xs' className={classes.container}>
                 <div className={classes.div}>
-                    <Avatar className= {classes.avatar}>
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component='h1' variant='h5'> Sing In</Typography> 
-                    
+                    <Avatar>
 
-                </div>
+                    </Avatar>
+
+                </div><
 
             </container>
 
@@ -58,11 +57,6 @@ const useStyle = makeStyles((theme) => ({
             width: '100%',
             height: '100%'
     },
-
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.primary.main
-    }
 
     div: {
         marginTop: theme.spacing(8),

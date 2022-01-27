@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 
 import { AppBar, makeStyles } from '@material-ui/core';
 
-import {Grid, Container, Paper, Avatar, Typography } from  '@material-ui/core';
+import {Grid, Container, Paper, Avatar, tipography } from  '@material-ui/core';
 
 import logueo from '../img/logueo.jpg';
 
@@ -27,8 +27,6 @@ const LogIn = () => {
                     <Avatar className= {classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
-                    <Typography component='h1' variant='h5'> Sing In</Typography> 
-                    
 
                 </div>
 
