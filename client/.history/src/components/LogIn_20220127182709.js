@@ -26,7 +26,7 @@ const useStyle = makeStyles((theme) => ({
             marginTop: 0,
             width: '100%',
             height: '100%'
-        }
+            
     },
 
     avatar: {

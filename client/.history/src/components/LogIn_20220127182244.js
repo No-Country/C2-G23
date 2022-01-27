@@ -22,11 +22,10 @@ const useStyle = makeStyles((theme) => ({
         opacity: '0.8',
         height: '60%',
         marginTop: theme.spacing(10),
-        [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
+        [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: 
             marginTop: 0,
             width: '100%',
             height: '100%'
-        }
     },
 
     avatar: {
@@ -38,16 +37,16 @@ const useStyle = makeStyles((theme) => ({
         marginTop: theme.spacing(8),
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
     },
 
     form: {
         width: '100%',
-        marginTop: theme.spacing(1)
+        marginTop: theme.spacing(1),
     },
 
     button: {
-        margin: theme.spacing(3, 0, 2)
+        margin: theme.spacing(3, 0, 2),
     },
 
     }))

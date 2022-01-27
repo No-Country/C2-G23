@@ -14,7 +14,7 @@ const useStyle = makeStyles((theme) => ({
         backgroundRepeat: 'no.repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh'
+        height: '100vh',
     
     },
 
@@ -22,11 +22,10 @@ const useStyle = makeStyles((theme) => ({
         opacity: '0.8',
         height: '60%',
         marginTop: theme.spacing(10),
-        [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
+        [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
             marginTop: 0,
             width: '100%',
             height: '100%'
-        }
     },
 
     avatar: {

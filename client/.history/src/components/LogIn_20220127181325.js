@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react';
 
-import { makeStyles } from '@material-ui/core/Styles';
+import { makeStyles } from '@material-ui/core';
 
 import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline } from  '@material-ui/core';
 
@@ -22,11 +22,10 @@ const useStyle = makeStyles((theme) => ({
         opacity: '0.8',
         height: '60%',
         marginTop: theme.spacing(10),
-        [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
+        [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
             marginTop: 0,
             width: '100%',
             height: '100%'
-        }
     },
 
     avatar: {
@@ -126,5 +125,9 @@ const LogIn = () => {
         </Grid>         
            
     )
-}; export default LogIn
+};
+
+
+
+export default LogIn
 
