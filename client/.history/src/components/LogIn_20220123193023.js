@@ -2,9 +2,6 @@ import { React, useState, useEffect } from 'react';
 
 import { AppBar, makeStyles } from '@material-ui/core';
 
-import {Grid, Container, Paper } from  '@material-ui/core';
-
-import logueo from './img/logueo.jpg'
 
 const LogIn = () => {
     const [mobile, setMobile] = useState(true);
@@ -16,27 +13,22 @@ const LogIn = () => {
         window.addEventListener("resize", () => responsivness())
     }, []);
 
-
     return (
-        <Grid container component='main' className={Classes.root}>
-        
-        <container component={Paper} elevation = {5} maxWidth= 'xs'>
-            </container>
-        </Grid>         
-           
+        <div>         
+            <h1>Mi Reserva</h1>
+            <hr></hr>
+
+            <h6>Si olvidaste tu contraseña hace click en RESTABLECER</h6>
+            <input type="text" id=confirmaci
+
+            <section>
+                
+            </section>
+        </div>
     )
 };
 
 const useStyle = makeStyles((theme) => ({
-    root: {
-        backgroundImage: 'url(${logueo})',
-        backgroundRepeat: 'no.repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh'
-    
-    },
-
     footer: {
         textAlign: "center",
         textAlignLast: "start",

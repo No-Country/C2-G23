@@ -4,7 +4,7 @@ import { AppBar, makeStyles } from '@material-ui/core';
 
 import {Grid, Container, Paper } from  '@material-ui/core';
 
-import logueo from './img/logueo.jpg'
+impimport habitacion3 from '../img/habitacion3.jpg'ort
 
 const LogIn = () => {
     const [mobile, setMobile] = useState(true);
@@ -18,25 +18,22 @@ const LogIn = () => {
 
 
     return (
-        <Grid container component='main' className={Classes.root}>
-        
-        <container component={Paper} elevation = {5} maxWidth= 'xs'>
+        <Grid container component='main'>
+            <container component={Paper} elevation = {5} maxWidth= 'xs'>
+
             </container>
+
         </Grid>         
            
     )
 };
 
 const useStyle = makeStyles((theme) => ({
-    root: {
-        backgroundImage: 'url(${logueo})',
-        backgroundRepeat: 'no.repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh'
+    root:{
+        backgroundImage: ''
+        backgroundRepeat:'no-repeat',
+    }
     
-    },
-
     footer: {
         textAlign: "center",
         textAlignLast: "start",

@@ -11,5 +11,6 @@ export default{
     "img3":habitacion3,
     "people1":people1,
     "people2":people2,
+    "Logueo":Logueo,
 
 }
