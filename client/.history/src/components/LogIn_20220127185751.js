@@ -51,6 +51,12 @@ const useStyle = makeStyles((theme) => ({
         margin: theme.spacing(3, 0, 2)
     },
 
+    inputform: {
+        marginTop:
+        
+
+    },
+
     }))
 
 const LogIn = () => {
@@ -80,14 +86,14 @@ const LogIn = () => {
     return (
         <Grid container component='main' className={classes.root}>
             <CssBaseline/>
-            <Container component={Paper} elevation ={8} maxWidth='xs' className={classes.container}>
+            <Container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
                 <div className={classes.div}>
                     <Avatar className= {classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component='h1' variant='h5'> Sing In</Typography> 
                     <form className={classes.form}>
-                     <TextField 
+                     <TextField className={classes.inputform}
                          fullWidth
                          color='primary'
                          margin='normal'

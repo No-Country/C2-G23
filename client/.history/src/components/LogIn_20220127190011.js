@@ -51,6 +51,11 @@ const useStyle = makeStyles((theme) => ({
         margin: theme.spacing(3, 0, 2)
     },
 
+    inputform: {
+        marginTop: theme.spacing(3)
+
+    },
+
     }))
 
 const LogIn = () => {
@@ -87,7 +92,7 @@ const LogIn = () => {
                     </Avatar>
                     <Typography component='h1' variant='h5'> Sing In</Typography> 
                     <form className={classes.form}>
-                     <TextField 
+                     <TextField className={classes.inputform}
                          fullWidth
                          color='primary'
                          margin='normal'

@@ -87,7 +87,7 @@ const LogIn = () => {
                     </Avatar>
                     <Typography component='h1' variant='h5'> Sing In</Typography> 
                     <form className={classes.form}>
-                     <TextField 
+                     <TextField className={classes.inputform}
                          fullWidth
                          color='primary'
                          margin='normal'
