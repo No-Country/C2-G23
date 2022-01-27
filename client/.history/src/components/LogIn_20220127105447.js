@@ -50,7 +50,7 @@ const LogIn = () => {
                     <Button
                         fullWidth
                         variant='contained'
-                        color='secondary'
+                        color='primary'
                         className={classes.button}
                     >
                     Ingresar

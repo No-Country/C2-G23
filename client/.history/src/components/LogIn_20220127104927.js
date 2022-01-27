@@ -30,8 +30,8 @@ const LogIn = () => {
                     <Typography component='h1' variant='h5'> Sing In</Typography> 
                     <form className={classes.form}>
                      <TextField
-                         fullWidth
-                         autoFocus
+                         fullwifullWidthfth
+                         autofocus
                          color='primary'
                          margin='normal'
                          variant='outlined'
@@ -39,7 +39,7 @@ const LogIn = () => {
                          name='usuario'
                      />
                      <TextField
-                         fullWidth
+                         fullwifth
                          type='password'
                          color='primary'
                          margin='normal'
@@ -47,13 +47,8 @@ const LogIn = () => {
                          label='Contraseña'
                      />
                     </form>
-                    <Button
+                    <Button>
                         fullWidth
-                        variant='contained'
-                        color='secondary'
-                        className={classes.button}
-                    >
-                    Ingresar
 
                     </Button>
 
@@ -101,10 +96,6 @@ const useStyle = makeStyles((theme) => ({
     form: {
         width: '100%',
         marginTop: theme.spacing(1)
-    },
-
-    button: {
-        margin: theme.spacing(3, 0, 2)
     },
 
     footer: {

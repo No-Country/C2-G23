@@ -50,8 +50,8 @@ const LogIn = () => {
                     <Button
                         fullWidth
                         variant='contained'
-                        color='secondary'
-                        className={classes.button}
+                        color='primary'
+                        className={button}
                     >
                     Ingresar
 
@@ -104,7 +104,7 @@ const useStyle = makeStyles((theme) => ({
     },
 
     button: {
-        margin: theme.spacing(3, 0, 2)
+        margin: theme.spacing(
     },
 
     footer: {

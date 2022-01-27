@@ -2,11 +2,11 @@ import { React, useState, useEffect } from 'react';
 
 import { AppBar, makeStyles } from '@material-ui/core';
 
-import {Grid, Container, Paper, Avatar, Typography, TextField, Button } from  '@material-ui/core';
+import {Grid, Container, Paper, Avatar, Typography } from  '@material-ui/core';
 
 import logueo from '../img/logueo.jpg';
 
-import {LockOutlined as LockOutlinedIcon} from '@material-ui/icons';
+import {LockOutlined as lockOutlinedIcon} from '@material-ui/icons';
 
 
 const LogIn = () => {
@@ -22,44 +22,17 @@ const LogIn = () => {
 
     return (
         <Grid container component='main' className={classes.root}>
-            <Container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
+            <container component={Paper} elevation ={5} maxWidth='xs' className={classes.container}>
                 <div className={classes.div}>
                     <Avatar className= {classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component='h1' variant='h5'> Sing In</Typography> 
-                    <form className={classes.form}>
-                     <TextField
-                         fullWidth
-                         autoFocus
-                         color='primary'
-                         margin='normal'
-                         variant='outlined'
-                         label='Usuario'
-                         name='usuario'
-                     />
-                     <TextField
-                         fullWidth
-                         type='password'
-                         color='primary'
-                         margin='normal'
-                         variant='outlined'
-                         label='Contraseña'
-                     />
-                    </form>
-                    <Button
-                        fullWidth
-                        variant='contained'
-                        color='secondary'
-                        className={classes.button}
-                    >
-                    Ingresar
-
-                    </Button>
+                    
 
                 </div>
 
-            </Container>
+            </container>
 
         </Grid>         
            
@@ -100,11 +73,13 @@ const useStyle = makeStyles((theme) => ({
 
     form: {
         width: '100%',
-        marginTop: theme.spacing(1)
-    },
-
-    button: {
-        margin: theme.spacing(3, 0, 2)
+        margin
+        backgroundImage: 'url(${logueo})',
+        backgroundRepeat: 'no.repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh'
+    
     },
 
     footer: {

@@ -47,13 +47,9 @@ const LogIn = () => {
                          label='Contraseña'
                      />
                     </form>
-                    <Button
+                    <Button>
                         fullWidth
-                        variant='contained'
-                        color='secondary'
-                        className={classes.button}
-                    >
-                    Ingresar
+                        variant=''
 
                     </Button>
 
@@ -101,10 +97,6 @@ const useStyle = makeStyles((theme) => ({
     form: {
         width: '100%',
         marginTop: theme.spacing(1)
-    },
-
-    button: {
-        margin: theme.spacing(3, 0, 2)
     },
 
     footer: {
