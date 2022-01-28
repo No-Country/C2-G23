@@ -56,7 +56,7 @@ const useStyle = makeStyles((theme) => ({
     },
 
     text: {
-        color: theme.palette.secondary.main
+        color:
 
     },
 

@@ -56,7 +56,7 @@ const useStyle = makeStyles((theme) => ({
     },
 
     text: {
-        color: theme.palette.secondary.main
+        color: theme.palette.primary.main
 
     },
 
@@ -112,7 +112,7 @@ const Recupero = () => {
                     <Button
                         fullWidth
                         variant='contained'
-                        color='secondary'
+                        color='primary'
                         className={classes.button}
                         onClick={()=> onSubmit()}
                     >
