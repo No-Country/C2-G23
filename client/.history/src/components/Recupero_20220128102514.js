@@ -87,7 +87,7 @@ const Recupero = () => {
             <Container component={Paper} elevation ={8} maxWidth='xs' className={classes.container}>
                 <div className={classes.div}>
                     <Avatar className= {classes.avatar}>
-                        <LockResetOutlinedIcon />
+                        <LockOutlinedIcon />
                     </Avatar>
                     <Typography component='h1' variant='h5'> ¿Olvidó su contraseña? </Typography> 
                     <hr></hr>
