@@ -7,7 +7,6 @@ import Servicios from "./components/Services";
 import SignIn from "./components/SignIn"
 import LogIn from "./components/LogIn";
 import Footer from './components/Footer';
-import Recupero from "./components/Recupero";
 
 function App() {
   return (

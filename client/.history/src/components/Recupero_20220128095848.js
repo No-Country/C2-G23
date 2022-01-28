@@ -6,8 +6,6 @@ import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseli
 
 import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
 
-import logueo from '../img/logueo.jpg'
-
 
 const useStyle = makeStyles((theme) => ({
     root: {
@@ -19,46 +17,10 @@ const useStyle = makeStyles((theme) => ({
     
     },
 
-    container: {
-        opacity: '0.8',
-        height: '60%',
-        marginTop: theme.spacing(10),
-        [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
-            marginTop: 0,
-            width: '100%',
-            height: '100%'
-        }
-    },
-
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.primary.main
-    },
-
-    link:{
-
-    },
-
-    div: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-    },
-
-    form: {
-        width: '100%',
-        marginTop: theme.spacing(1)
-
-    },
-
-    button: {
-        margin: theme.spacing(3, 0, 2)
-    },
 
     }))
 
-const LogIn = () => {
+const Recupero = () => {
     const [mobile, setMobile] = useState(true);
     const classes = useStyle();
     const [body, setbody] = useState({usuario: '' , contraseña: '' });
@@ -81,7 +43,6 @@ const LogIn = () => {
         window.addEventListener("resize", () => responsivness())
     }, []);
 
-
     return (
         <Grid container component='main' className={classes.root}>
             <CssBaseline/>
@@ -102,17 +63,7 @@ const LogIn = () => {
                          value={body.usuario}
                          onChange={handleChange}
                      />
-                     <TextField
-                         fullWidth
-                         type='password'
-                         color='primary'
-                         margin='normal'
-                         variant='outlined'
-                         label='contraseña'
-                         name='contraseña'
-                         value={body.contraseña}
-                         onChange={handleChange}
-                     />
+
                     </form>
                     <Button
                         fullWidth
@@ -124,7 +75,7 @@ const LogIn = () => {
                     Ingresar
                     </Button>
 
-                    <Link href= "/Recupero" className={classes.link}>
+                    <Link href= "/Home" className={classes.link}>
                         Recuperar contraseña
                     </Link>
 
@@ -132,11 +83,9 @@ const LogIn = () => {
 
             </Container>
 
-        </Grid>         
-           
+        </Grid> 
     )
-}; export default LogIn
 
+}; 
 
-
-
+export default Recupero

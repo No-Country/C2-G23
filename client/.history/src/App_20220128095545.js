@@ -7,7 +7,6 @@ import Servicios from "./components/Services";
 import SignIn from "./components/SignIn"
 import LogIn from "./components/LogIn";
 import Footer from './components/Footer';
-import Recupero from "./components/Recupero";
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
           <Route path="/logIn" element={<LogIn />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/services" element={<Servicios />} />
-          <Route path="/Recupero" element={<Recupero />} />
+          <Route path="/R" element={<Servicios />} />
         </Routes>
         <Footer />
     </Router>

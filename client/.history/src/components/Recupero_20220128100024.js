@@ -6,8 +6,6 @@ import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseli
 
 import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
 
-import logueo from '../img/logueo.jpg'
-
 
 const useStyle = makeStyles((theme) => ({
     root: {
@@ -56,9 +54,10 @@ const useStyle = makeStyles((theme) => ({
         margin: theme.spacing(3, 0, 2)
     },
 
+
     }))
 
-const LogIn = () => {
+const Recupero = () => {
     const [mobile, setMobile] = useState(true);
     const classes = useStyle();
     const [body, setbody] = useState({usuario: '' , contraseña: '' });
@@ -81,7 +80,6 @@ const LogIn = () => {
         window.addEventListener("resize", () => responsivness())
     }, []);
 
-
     return (
         <Grid container component='main' className={classes.root}>
             <CssBaseline/>
@@ -90,7 +88,7 @@ const LogIn = () => {
                     <Avatar className= {classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
-                    <Typography component='h1' variant='h5'> Sing In</Typography> 
+                    <Typography component='h1' variant='h5'> Olvidó su contraseña</Typography> 
                     <form className={classes.form}>
                      <TextField 
                          fullWidth
@@ -102,17 +100,6 @@ const LogIn = () => {
                          value={body.usuario}
                          onChange={handleChange}
                      />
-                     <TextField
-                         fullWidth
-                         type='password'
-                         color='primary'
-                         margin='normal'
-                         variant='outlined'
-                         label='contraseña'
-                         name='contraseña'
-                         value={body.contraseña}
-                         onChange={handleChange}
-                     />
                     </form>
                     <Button
                         fullWidth
@@ -121,7 +108,7 @@ const LogIn = () => {
                         className={classes.button}
                         onClick={()=> onSubmit()}
                     >
-                    Ingresar
+                    Recuperar
                     </Button>
 
                     <Link href= "/Recupero" className={classes.link}>
@@ -132,11 +119,9 @@ const LogIn = () => {
 
             </Container>
 
-        </Grid>         
-           
+        </Grid> 
     )
-}; export default LogIn
 
+}; 
 
-
-
+export default Recupero
