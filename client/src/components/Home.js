@@ -46,7 +46,7 @@ const useStyle = makeStyles((theme) => ({
     },
     main: {
         backgroundColor: "black",
-        backgroundImage: "url()",
+        backgroundImage: "url('../img/principal_body.jpg')",
     },
 
 }))
