@@ -35,7 +35,7 @@ const useStyle = makeStyles((theme) => ({
     },
 
     link:{
-        color: theme.palette.secondary.main
+
     },
 
     div: {
@@ -53,6 +53,11 @@ const useStyle = makeStyles((theme) => ({
 
     button: {
         margin: theme.spacing(3, 0, 2)
+    },
+
+    text: {
+        color: theme.palette.secondary.main
+
     },
 
 
@@ -91,7 +96,7 @@ const Recupero = () => {
                     </Avatar>
                     <Typography component='h1' variant='h5'> ¿Olvidó su contraseña? </Typography> 
                     <hr></hr>
-                    <h6> Ingrese su usuario, le llegará un mail a la casilla registrada con las instrucciones para recuperar su cuenta</h6>
+                    <h6 className={classes.text}> Ingrese su usuario, le llegará un mail a la casilla registrada con las instrucciones para recuperar su cuenta</h6>
                     <form className={classes.form}>
                      <TextField 
                          fullWidth

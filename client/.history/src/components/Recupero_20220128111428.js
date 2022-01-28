@@ -35,7 +35,7 @@ const useStyle = makeStyles((theme) => ({
     },
 
     link:{
-        color: theme.palette.secondary.main
+        
     },
 
     div: {
