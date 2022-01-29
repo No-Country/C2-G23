@@ -15,25 +15,13 @@ const Footer = () => {
 
         return (
             <div>
+            
             </div>
     )
 };
 
 const useStyle = makeStyles((theme) => ({
-    footer: {
-        textAlign:"center",
-        textAlignLast:"start",
-        backgroundColor:"#db6930"
-    },
-    primero:{
-        backgroundColor:"black",
-        color:"white",
-    },
-    container:{
-        display:"flex",
-        justifyContent:"center",
-        padding: theme.spacing (5,0,5,0)
-    },
+    
     logo: {
         width: "15%",
         margin: theme.spacing(1, 0, 1, 0),
