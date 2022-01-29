@@ -59,7 +59,21 @@ class HotelService {
             return $hotel::all();
         }
 
-        
+    }
 
+    public function showHotelsByZoneLocation(array $filters)
+    {
+        try {
+
+            $province = $filters['province'];
+            $city = $filters['city'];
+
+            $hotelInformation = $this->hiRepository->showHotelsByZoneLocation($province, $city);
+
+            return $hotelInformation;
+
+        } catch (\Exception $e) {
+            throw $e;
+        }
     }
 }

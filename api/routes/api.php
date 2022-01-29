@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\HotelRoomController;
 use App\Http\Controllers\ZoneLocationController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('zone', [ZoneLocationController::class, 'createZoneLocation']);
+Route::post('zone/province', [ZoneLocationController::class, 'createZoneProvince']);
 Route::get('zone/all', [ZoneLocationController::class, 'showZoneLocations']);
-Route::get('zone/cities', [ZoneLocationController::class, 'showCitiesByProvince']);
 
 Route::post('hotel', [HotelController::class, 'createHotel']);
+
+Route::get('hotel/all', [HotelController::class, 'getHotels']);
+Route::get('hotel/zoneLocation', [HotelController::class, 'showHotelsByZoneLocation']);
+Route::get('hotel/rooms', [HotelRoomController::class, 'showByHotelId']);
+Route::get('room/create', [HotelRoomController::class, 'showByHotelId']);
+

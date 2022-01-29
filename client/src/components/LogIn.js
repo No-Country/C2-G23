@@ -1,29 +1,9 @@
-<<<<<<< HEAD
-import React from "react"
-import styles from "../styles/Footer.module.css"
-
-const Footer = () => {
-    return (
-        /* <p className={styles.p}>ACÁ VA EL FOOTER</p> */
-        <nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"/>
-      Bootstrap
-    </a>
-  </div>
-</nav>
-    )
-}
-
-export default Footer
-=======
 import { React, useState, useEffect } from 'react';
 
 import { makeStyles } from '@material-ui/core';
 
-const Footer = () => {
 
+const LogIn = () => {
     const [mobile, setMobile] = useState(true);
     const classes = useStyle();
 
@@ -33,26 +13,26 @@ const Footer = () => {
         window.addEventListener("resize", () => responsivness())
     }, []);
 
-        return (
-            <div>
-            </div>
+    return (
+        <div>
+        </div>
     )
 };
 
 const useStyle = makeStyles((theme) => ({
     footer: {
-        textAlign:"center",
-        textAlignLast:"start",
-        backgroundColor:"#db6930"
+        textAlign: "center",
+        textAlignLast: "start",
+        backgroundColor: "#db6930"
     },
-    primero:{
-        backgroundColor:"black",
-        color:"white",
+    primero: {
+        backgroundColor: "black",
+        color: "white",
     },
-    container:{
-        display:"flex",
-        justifyContent:"center",
-        padding: theme.spacing (5,0,5,0)
+    container: {
+        display: "flex",
+        justifyContent: "center",
+        padding: theme.spacing(5, 0, 5, 0)
     },
     logo: {
         width: "15%",
@@ -95,5 +75,5 @@ const useStyle = makeStyles((theme) => ({
 
 }))
 
-export default Footer;
->>>>>>> origin/frontGeronimo
+export default LogIn
+

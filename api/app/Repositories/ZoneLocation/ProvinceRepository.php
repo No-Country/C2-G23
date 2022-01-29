@@ -3,28 +3,13 @@
 namespace App\Repositories\ZoneLocation;
 
 use App\Models\Province;
-use App\Repositories\Interface\RepositoryInterface;
+use App\Repositories\Repository;
 
-class ProvinceRepository implements RepositoryInterface {
+class ProvinceRepository extends Repository {
 
     public function create(array $repositoryModel) : Province
     {
         return Province::create($repositoryModel);
-    }
-
-    public function update(array $repositoryModel)
-    {
-        return null;
-    }
-
-    public function show()
-    {
-        return Province::all();
-    }
-
-    public function remove()
-    {
-        return null;
     }
 
     public function find(int $repositoryId) : ?Province
