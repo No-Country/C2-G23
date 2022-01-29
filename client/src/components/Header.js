@@ -1,7 +1,7 @@
 import {React, useState, useEffect }from 'react';
 
 // Componentes Material UI
-import { AppBar, Avatar, Drawer, IconButton, InputBase, List, ListItem, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Avatar, Drawer, IconButton, InputBase, Link, List, ListItem, makeStyles, Toolbar, Typography } from '@material-ui/core';
 
 // Iconos
 import SearchIcon from "@material-ui/icons/Search"
@@ -33,7 +33,7 @@ const Header = () =>{
             return headersData.map((data)=>{
                 return(
                     <List>
-                        <ListItem>{ data }</ListItem>
+                            <ListItem>{ data }</ListItem>
                     </List>
                 )
             })
@@ -42,7 +42,9 @@ const Header = () =>{
         <Toolbar className={classes.toolbar}>
                 <img src={logo} className={classes.logo} alt="logo" />
                 <div className={classes.right}>
-                    <Typography>Sign In</Typography>
+                    <Link href="/logIn" className={classes.right}>
+                        <Typography>Log In</Typography>
+                    </Link>
                     <Avatar className={classes.avatar} />
                     <IconButton {...{
                         edge: "start",
@@ -74,7 +76,9 @@ const Header = () =>{
                     <SearchIcon />
                 </div>
                 <div className={classes.right}>
-                    <Typography>Sign In</Typography>
+                    <Link href='/LogIn' className={classes.right}>
+                        <Typography>Log In</Typography>
+                    </Link>
                     <Avatar className={classes.avatar} />
                 </div>
             </Toolbar>
@@ -112,6 +116,11 @@ const useStyle = makeStyles((theme) => ({
         fontSize:"1rem",
         padding: theme.spacing(1,5,1,5),
         color: "white",
+    },
+    link: {
+        color:'white',
+        textDecoration: 'none',
+        margin: theme.spacing(0.1)
     },
     center:{
         display:"flex",

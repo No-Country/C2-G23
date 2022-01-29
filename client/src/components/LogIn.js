@@ -36,7 +36,8 @@ const useStyle = makeStyles((theme) => ({
     },
 
     link:{
-
+        textDecoration:'none',
+        margin:theme.spacing(0.1)
     },
 
     div: {
@@ -90,7 +91,7 @@ const LogIn = () => {
                     <Avatar className= {classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
-                    <Typography component='h1' variant='h5'> Sing In</Typography> 
+                    <Typography component='h1' variant='h5'> Log In</Typography> 
                     <form className={classes.form}>
                      <TextField 
                          fullWidth
@@ -126,6 +127,10 @@ const LogIn = () => {
 
                     <Link href= "/Recupero" className={classes.link}>
                         Recuperar contraseña
+                    </Link>
+
+                    <Link href="/Home" className={classes.link}>
+                        Volver al Inicio
                     </Link>
 
                 </div>
