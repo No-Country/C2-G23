@@ -1,11 +1,80 @@
 import { React, useState, useEffect } from 'react';
 
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/Styles';
 
+import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline, Link } from  '@material-ui/core';
+
+import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
+
+import logueo from '../img/logueo.jpg'
+
+
+const useStyle = makeStyles((theme) => ({
+    root: {
+        backgroundImage: `url(${logueo})`,
+        backgroundRepeat: 'no.repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh'
+    
+    },
+
+    container: {
+        opacity: '0.8',
+        height: '60%',
+        marginTop: theme.spacing(10),
+        [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
+            marginTop: 0,
+            width: '100%',
+            height: '100%'
+        }
+    },
+
+    avatar: {
+        margin: theme.spacing(1),
+        backgroundColor: theme.palette.primary.main
+    },
+
+    link:{
+        textDecoration:'none',
+        margin:theme.spacing(0.1)
+    },
+
+    div: {
+        marginTop: theme.spacing(8),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+
+    form: {
+        width: '100%',
+        marginTop: theme.spacing(1)
+
+    },
+
+    button: {
+        margin: theme.spacing(3, 0, 2)
+    },
+
+    }))
 
 const LogIn = () => {
     const [mobile, setMobile] = useState(true);
     const classes = useStyle();
+    const [body, setbody] = useState({usuario: '' , contraseña: '' });
+
+    const handleChange = e => {
+        setbody({
+            ...body,
+            [e.target.name]: e.target.value
+        })
+
+    }
+
+    const onSubmit =()=>{
+        console.log(body)
+    }
 
     useEffect(() => {
         const responsivness = () => window.innerWidth < 900 ? setMobile(true) : setMobile(false);
@@ -13,67 +82,66 @@ const LogIn = () => {
         window.addEventListener("resize", () => responsivness())
     }, []);
 
+
     return (
-        <div>
-        </div>
+        <Grid container component='main' className={classes.root}>
+            <CssBaseline/>
+            <Container component={Paper} elevation ={8} maxWidth='xs' className={classes.container}>
+                <div className={classes.div}>
+                    <Avatar className= {classes.avatar}>
+                        <LockOutlinedIcon />
+                    </Avatar>
+                    <Typography component='h1' variant='h5'> Log In</Typography> 
+                    <form className={classes.form}>
+                     <TextField 
+                         fullWidth
+                         color='primary'
+                         margin='normal'
+                         variant='outlined'
+                         label='usuario'
+                         name='usuario'
+                         value={body.usuario}
+                         onChange={handleChange}
+                     />
+                     <TextField
+                         fullWidth
+                         type='password'
+                         color='primary'
+                         margin='normal'
+                         variant='outlined'
+                         label='contraseña'
+                         name='contraseña'
+                         value={body.contraseña}
+                         onChange={handleChange}
+                     />
+                    </form>
+                    <Button
+                        fullWidth
+                        variant='contained'
+                        color='primary'
+                        className={classes.button}
+                        onClick={()=> onSubmit()}
+                    >
+                    Ingresar
+                    </Button>
+
+                    <Link href= "/Recupero" className={classes.link}>
+                        Recuperar contraseña
+                    </Link>
+
+                    <Link href="/Home" className={classes.link}>
+                        Volver al Inicio
+                    </Link>
+
+                </div>
+
+            </Container>
+
+        </Grid>         
+           
     )
-};
+}; export default LogIn
 
-const useStyle = makeStyles((theme) => ({
-    footer: {
-        textAlign: "center",
-        textAlignLast: "start",
-        backgroundColor: "#db6930"
-    },
-    primero: {
-        backgroundColor: "black",
-        color: "white",
-    },
-    container: {
-        display: "flex",
-        justifyContent: "center",
-        padding: theme.spacing(5, 0, 5, 0)
-    },
-    logo: {
-        width: "15%",
-        margin: theme.spacing(1, 0, 1, 0),
-        objectFit: "contain",
-    },
-    input: {
-        fontSize: "1rem",
-        padding: theme.spacing(1, 5, 1, 5),
-        color: "white",
-    },
-    center: {
-        display: "flex",
-        alignItems: "center",
-        padding: theme.spacing(1),
-        margin: theme.spacing(1),
-        border: "1px solid white",
-        borderRadius: "999px",
-        minWidth: "20rem"
-    },
-    right: {
-        display: "flex",
-        alignItems: "center",
-        marginLeft: theme.spacing(1)
-    },
-    avatar: {
-        margin: theme.spacing(1),
-    },
-    menu: {
-        color: "white",
-        backgroundColor: "black"
-    },
-    menuIcon: {
-        color: "black",
-        fontSize: "2.5rem",
-        backgroundColor: "white",
-        border: "2px solid white",
-        borderRadius: "5px"
-    }
 
-}))
 
-export default LogIn
 
