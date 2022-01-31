@@ -15,13 +15,38 @@ const Footer = () => {
 
         return (
             <div>
-            
+            <footer className={classes.footer}>
+            <div>
+                <p className={classes.letras}>Av. Falsa 123</p>
+                <p className={classes.letras}>TEL: +54 11 1234 5678</p>
+            </div>
+            <div className={classes.letras}>LOGO</div>
+            <div className={classes.letras}>TÉRMINOS Y CONDICIONES</div>
+
+            </footer>
             </div>
     )
 };
 
 const useStyle = makeStyles((theme) => ({
     
+    menuIcon: {
+        color: "black",
+        fontSize: "2.5rem",
+        backgroundColor: "white",
+        border: "2px solid white",
+        borderRadius: "5px"
+    },
+    footer: {
+        backgroundColor: "black",
+        height: "90px",
+        display: "flex",
+        justifyContent: "space-around",
+        paddingTop: "10px",
+    },
+    letras: {
+        color: "white",
+    },
     logo: {
         width: "15%",
         margin: theme.spacing(1, 0, 1, 0),
@@ -52,13 +77,6 @@ const useStyle = makeStyles((theme) => ({
     menu: {
         color: "white",
         backgroundColor: "black"
-    },
-    menuIcon: {
-        color: "black",
-        fontSize: "2.5rem",
-        backgroundColor: "white",
-        border: "2px solid white",
-        borderRadius: "5px"
     }
 
 }))
