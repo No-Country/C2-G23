@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react';
-
 import { makeStyles } from '@material-ui/core';
+import Img from '../assets/logo2'
 
 const Footer = () => {
 
@@ -20,7 +20,9 @@ const Footer = () => {
                 <p className={classes.letras}>Av. Falsa 123</p>
                 <p className={classes.letras}>TEL: +54 11 1234 5678</p>
             </div>
-            <div className={classes.letras}>LOGO</div>
+            <div className={classes.letras}>
+                <img src={Img.logo2} className={classes.logo}/>
+            </div>
             <div className={classes.letras}>TÉRMINOS Y CONDICIONES</div>
 
             </footer>
@@ -46,10 +48,12 @@ const useStyle = makeStyles((theme) => ({
     },
     letras: {
         color: "white",
+        marginBottom: "0",
+        paddingTop: "10px",
     },
     logo: {
-        width: "15%",
-        margin: theme.spacing(1, 0, 1, 0),
+        width: "145px",
+        padding: theme.spacing(1, 0, 1, 0),
         objectFit: "contain",
     },
     input: {
