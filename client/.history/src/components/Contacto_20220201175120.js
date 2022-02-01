@@ -23,7 +23,7 @@ const useStyle = makeStyles((theme) => ({
         opacity: '0.8',
         height: '90%',
         width: '90%',
-        marginTop: theme.spacing(30),
+        marginTop: theme.spacing(10),
         [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
             marginTop: 0,
             width: '100%',
@@ -79,13 +79,13 @@ const Contacto = () => {
                     <Avatar className= {classes.avatar}>
                         <ConnectWithoutContactIcon />
                     </Avatar>
-                    <Typography component='h1' variant='h4'> Contactanos</Typography> 
+                    <Typography component='h1' variant='h5'> Contactanos</Typography> 
                     <form className={classes.form}>
                      <TextField 
                          fullWidth
                          color='primary'
                          margin='normal'
-                         variant= 'outlined'
+                         variant='outlined'
                          label='Apellido'
                          name='Apellido'
 

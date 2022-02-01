@@ -79,7 +79,7 @@ const Contacto = () => {
                     <Avatar className= {classes.avatar}>
                         <ConnectWithoutContactIcon />
                     </Avatar>
-                    <Typography component='h1' variant='h4'> Contactanos</Typography> 
+                    <Typography component='h1' variant='h5'> Contactanos</Typography> 
                     <form className={classes.form}>
                      <TextField 
                          fullWidth

@@ -79,13 +79,13 @@ const Contacto = () => {
                     <Avatar className= {classes.avatar}>
                         <ConnectWithoutContactIcon />
                     </Avatar>
-                    <Typography component='h1' variant='h4'> Contactanos</Typography> 
+                    <Typography component='h1' variant='h5'> Contactanos</Typography> 
                     <form className={classes.form}>
                      <TextField 
                          fullWidth
                          color='primary'
                          margin='normal'
-                         variant= 'outlined'
+                         variant= 'standard'
                          label='Apellido'
                          name='Apellido'
 
@@ -94,7 +94,7 @@ const Contacto = () => {
                          fullWidth
                          color='primary'
                          margin='normal'
-                         variant='outlined'
+                         variant='standard'
                          label='Nombre'
                          name='Nombre'
 
@@ -104,7 +104,7 @@ const Contacto = () => {
                          fullWidth
                          color='primary'
                          margin='normal'
-                         variant='outlined'
+                         variant='standard'
                          label='E-mail'
                          name='E-mail'
 
@@ -113,7 +113,7 @@ const Contacto = () => {
                          fullWidth
                          color='primary'
                          margin='normal'
-                         variant='outlined'
+                         variant='standard'
                          label='Telefono'
                          name='Telefono'
 
@@ -123,7 +123,7 @@ const Contacto = () => {
                          fullWidth
                          color='primary'
                          margin='normal'
-                         variant='outlined'
+                         variant='standard'
                          label='Escriba su mensaje'
                          name='Mensaje'
 
