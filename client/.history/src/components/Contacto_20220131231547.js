@@ -33,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
 
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.success.main
+        backgroundColor: theme.palette.primary.main
     },
 
     link:{
@@ -97,7 +97,7 @@ const Contacto = () => {
                          margin='normal'
                          variant='outlined'
                          label='Nombre'
-                         name='Nombre'
+                         name='nombre'
 
                      />
                     </form>

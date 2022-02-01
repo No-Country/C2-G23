@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/Styles';
 
 import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline, Link } from  '@material-ui/core';
 
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';;
 
 import contact from '../img/contact.jpg'
 
@@ -21,9 +21,8 @@ const useStyle = makeStyles((theme) => ({
 
     container: {
         opacity: '0.8',
-        height: '90%',
-        width: '90%',
-        marginTop: theme.spacing(40),
+        height: '60%',
+        marginTop: theme.spacing(10),
         [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
             marginTop: 0,
             width: '100%',
@@ -33,7 +32,7 @@ const useStyle = makeStyles((theme) => ({
 
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.success.main
+        backgroundColor: theme.palette.primary.main
     },
 
     link:{
@@ -86,8 +85,8 @@ const Contacto = () => {
                          color='primary'
                          margin='normal'
                          variant='outlined'
-                         label='Apellido'
-                         name='Apellido'
+                         label='usuario'
+                         name='usuario'
 
                      />
                      <TextField
@@ -96,8 +95,8 @@ const Contacto = () => {
                          color='primary'
                          margin='normal'
                          variant='outlined'
-                         label='Nombre'
-                         name='Nombre'
+                         label='contraseña'
+                         name='contraseña'
 
                      />
                     </form>

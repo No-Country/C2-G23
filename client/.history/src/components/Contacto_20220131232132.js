@@ -23,6 +23,7 @@ const useStyle = makeStyles((theme) => ({
         opacity: '0.8',
         height: '90%',
         width: '90%',
+        backgroundColor: theme.palette.info.light,
         marginTop: theme.spacing(40),
         [theme.breakpoints.down(400 + theme.spacing(2)+2)]: {
             marginTop: 0,

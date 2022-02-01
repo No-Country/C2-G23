@@ -33,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
 
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.success.main
+        backgroundColor: theme.palette.primary.main
     },
 
     link:{
@@ -86,8 +86,8 @@ const Contacto = () => {
                          color='primary'
                          margin='normal'
                          variant='outlined'
-                         label='Apellido'
-                         name='Apellido'
+                         label='usuario'
+                         name='usuario'
 
                      />
                      <TextField
@@ -96,8 +96,8 @@ const Contacto = () => {
                          color='primary'
                          margin='normal'
                          variant='outlined'
-                         label='Nombre'
-                         name='Nombre'
+                         label='contraseña'
+                         name='contraseña'
 
                      />
                     </form>
