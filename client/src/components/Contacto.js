@@ -6,12 +6,12 @@ import {Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseli
 
 import { LockOutlined as LockOutlinedIcon } from '@material-ui/icons';
 
-import logueo from '../img/logueo.jpg'
+import Contacto from '../img/Contacto.jpg'
 
 
 const useStyle = makeStyles((theme) => ({
     root: {
-        backgroundImage: `url(${logueo})`,
+        backgroundImage: `url(${Contacto})`,
         backgroundRepeat: 'no.repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -58,7 +58,7 @@ const useStyle = makeStyles((theme) => ({
 
     }))
 
-const LogIn = () => {
+const Contact = () => {
     const [mobile, setMobile] = useState(true);
     const classes = useStyle();
     const [body, setbody] = useState({usuario: '' , contraseña: '' });
