@@ -97,7 +97,8 @@ const contacto = () => {
                          variant='outlined'
                          label='contraseña'
                          name='contraseña'
-
+                         value={body.contraseña}
+                         onChange={handleChange}
                      />
                     </form>
                     <Button
@@ -105,7 +106,7 @@ const contacto = () => {
                         variant='contained'
                         color='primary'
                         className={classes.button}
-
+                        onClick={()=> onSubmit()}
                     >
                     Ingresar
                     </Button>

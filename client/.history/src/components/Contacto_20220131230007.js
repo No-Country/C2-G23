@@ -61,7 +61,19 @@ const useStyle = makeStyles((theme) => ({
 const contacto = () => {
     const [mobile, setMobile] = useState(true);
     const classes = useStyle();
-   
+    const [body, setbody] = useState({usuario: '' , contraseña: '' });
+
+    const handleChange = e => {
+        setbody({
+            ...body,
+            [e.target.name]: e.target.value
+        })
+
+    }
+
+    const onSubmit =()=>{
+        console.log(body)
+    }
 
     useEffect(() => {
         const responsivness = () => window.innerWidth < 900 ? setMobile(true) : setMobile(false);
@@ -87,7 +99,8 @@ const contacto = () => {
                          variant='outlined'
                          label='usuario'
                          name='usuario'
-
+                         value={body.usuario}
+                         onChange={handleChange}
                      />
                      <TextField
                          fullWidth
@@ -97,7 +110,8 @@ const contacto = () => {
                          variant='outlined'
                          label='contraseña'
                          name='contraseña'
-
+                         value={body.contraseña}
+                         onChange={handleChange}
                      />
                     </form>
                     <Button
@@ -105,7 +119,7 @@ const contacto = () => {
                         variant='contained'
                         color='primary'
                         className={classes.button}
-
+                        onClick={()=> onSubmit()}
                     >
                     Ingresar
                     </Button>

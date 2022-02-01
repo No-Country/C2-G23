@@ -105,7 +105,7 @@ const contacto = () => {
                         variant='contained'
                         color='primary'
                         className={classes.button}
-
+                        onClick={()=> onSubmit()}
                     >
                     Ingresar
                     </Button>

@@ -63,6 +63,8 @@ const contacto = () => {
     const classes = useStyle();
    
 
+
+
     useEffect(() => {
         const responsivness = () => window.innerWidth < 900 ? setMobile(true) : setMobile(false);
         responsivness();
@@ -87,7 +89,8 @@ const contacto = () => {
                          variant='outlined'
                          label='usuario'
                          name='usuario'
-
+                         value={body.usuario}
+                         onChange={handleChange}
                      />
                      <TextField
                          fullWidth
@@ -97,7 +100,8 @@ const contacto = () => {
                          variant='outlined'
                          label='contraseña'
                          name='contraseña'
-
+                         value={body.contraseña}
+                         onChange={handleChange}
                      />
                     </form>
                     <Button
@@ -105,7 +109,7 @@ const contacto = () => {
                         variant='contained'
                         color='primary'
                         className={classes.button}
-
+                        onClick={()=> onSubmit()}
                     >
                     Ingresar
                     </Button>
