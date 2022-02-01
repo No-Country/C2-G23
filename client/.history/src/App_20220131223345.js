@@ -8,7 +8,7 @@ import SignIn from "./components/SignIn"
 import LogIn from "./components/LogIn";
 import Footer from './components/Footer';
 import Recupero from "./components/Recupero";
-import Contacto from "./components/Contacto";
+
 
 function App() {
   return (
