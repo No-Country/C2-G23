@@ -79,6 +79,7 @@ const useStyle = makeStyles((theme) => ({
     boton: {
         backgroundColor: "beige",
         borderRadius: "27px",
+        margin: "0 3px 0 3px",
     },
     input: {
         fontSize: "1rem",
