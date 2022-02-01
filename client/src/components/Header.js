@@ -43,7 +43,7 @@ const Header = () =>{
                 <img src={logo} className={classes.logo} alt="logo" />
                 <div className={classes.right}>
                     <Link href="/logIn" className={classes.right}>
-                        <Typography>Log In</Typography>
+                        <Typography className={classes.colorP}>Log In</Typography>
                     </Link>
                     <Avatar className={classes.avatar} />
                     <IconButton {...{
@@ -70,7 +70,11 @@ const Header = () =>{
     const displayDesktop = () => {
         return(
             <Toolbar className={classes.toolbar}>
+                <Link href="/Home" className={classes.link}>
                 <img src={ logo } className={classes.logo}/>
+                    </Link>
+                
+                
                 <div className={classes.center}>
                     <InputBase fullWidth placeholder='Busqueda...' inputProps={{className: classes.input}}/>
                     <SearchIcon />
@@ -102,14 +106,20 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor:"black",
         width:"100vw",
     },
+    colorP: {
+        color: "#0c68ee",
+    },
     toolbar: {
         display : "flex",
         justifyContent: "space-between",
         alignItems: "center"
     },
+    link: {
+        width: "15%",
+    },
     logo:{
-        width:"15%",
-        margin: theme.spacing( 1, 0, 1, 0),
+        width:"165px",
+        /* margin: theme.spacing( 1, 0, 1, 0), */
         objectFit: "contain",
     },
     input:{
