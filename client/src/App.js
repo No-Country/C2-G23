@@ -11,7 +11,6 @@ import Recupero from "./components/Recupero";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
 
 //Importación de componentes
-import Navbar from "./components/Header";
 import Footer from "./components/Footer";
 
 
