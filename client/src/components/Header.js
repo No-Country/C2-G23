@@ -70,7 +70,7 @@ const Header = () =>{
     const displayDesktop = () => {
         return(
             <Toolbar className={classes.toolbar}>
-                <Link href="/Home" className={classes.link}>
+                <Link href="/" className={classes.link}>
                 <img src={ logo } className={classes.logo}/>
                     </Link>
                 
