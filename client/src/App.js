@@ -8,6 +8,12 @@ import SignUp from "./components/SignUp"
 import LogIn from "./components/LogIn";
 import Footer from './components/Footer';
 import Recupero from "./components/Recupero";
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
+
+//Importación de componentes
+import Navbar from "./components/Header";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
