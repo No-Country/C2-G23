@@ -2,12 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\HotelRoomsResource;
-use App\Http\Resources\RoomResource;
-use App\Http\Responses\APIResponse;
 use App\Models\HotelRoom;
-use App\Services\HotelRoomsService;
-use Exception;
 use Illuminate\Http\Request;
 
 class HotelRoomController extends Controller
@@ -61,6 +56,20 @@ class HotelRoomController extends Controller
     }
 
     /**
+<<<<<<< HEAD
+     * Display the specified resource.
+     *
+     * @param  \App\Models\HotelRoom  $hotelRoom
+     * @return \Illuminate\Http\Response
+     */
+    public function show(HotelRoom $hotelRoom)
+    {
+        //
+    }
+
+    /**
+=======
+>>>>>>> origin/frontGeronimo
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\HotelRoom  $hotelRoom
